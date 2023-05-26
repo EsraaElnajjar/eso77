@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 470px;
+  margin-bottom: 40px;
+}
+
+/* Green */
+.success {
+  border-color: #04AA6D;
+  color: green;
+}
+
+.success:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Blue */
+.info {
+  border-color: #2196F3;
+  color: dodgerblue;
+}
+
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+
+/* Orange */
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.warning:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* Red */
+.danger {
+  border-color: #f44336;
+  color: red;
+}
+
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Gray */
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.default:hover {
+  background: #e7e7e7;
+}
+
+    </style>
+</head>
+<body>
+    <h1>student page</h1>
+    <form action="/enrolljava" method = "post">
+<div class="card">
+  <div class="container">
+    <h2><b>Java Class</b></h2>
+    <button class="btn info">Enroll</button>
+  </div>
+</div>
+</form>
+<form action="/enrollphp" method = "post">
+<div class="card">
+  <div class="container">
+    <h2><b>PHP Class</b></h2>
+    <button class="btn info">Enroll</button>
+  </div>
+</div>
+</form>
+<form action="/enrolldatabase" method = "post">
+<div class="card">
+  <div class="container">
+    <h2><b>DATABASE2 Class</b></h2>
+    <button class="btn info">Enroll</button>
+  </div>
+</div>
+</form>
+</body>
+</html>
+

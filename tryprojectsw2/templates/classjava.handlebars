@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Generate PDF using jsPDF Library</title>
+      <!--JSPDF CDN-->
+      <script src= "https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
+      </script>
+   <style>
+      .container {
+         position: fixed;
+         top: 20%;
+         left: 28%;
+         border-radius: 7px;
+      }
+      #generatePdf {
+         box-sizing: content-box;
+         width: 300px;
+         height: 100px;
+         padding: 30px;
+         border: 1px solid black;
+         font-style: sans-serif;
+         background-color: #f0f0f0;
+      }
+      #pdfButton {
+         background-color: #4caf50;
+         border-radius: 5px;
+         margin-left: 300px;
+         margin-bottom: 5px;
+         color: white;
+         font-size: larger;
+      }
+      h2 {
+         text-align: center;
+         color: #24650b;
+      }
+      table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+   </style>
+</head>
+<body>
+    <table>
+  <tr>
+    <th>PDF</th>
+    <th>Class</th>
+    <th>Download</th>
+  </tr>
+  <tr>
+    <td>Java introduction</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+  <tr>
+    <td>For Loop</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+  <tr>
+    <td>Selection Statements</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+  <tr>
+    <td>Equivilance</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+  <tr>
+    <td>Controllers</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+  <tr>
+    <td>Gradient</td>
+    <td>Java FX</td>
+    <td><button id="pdfButton">Download PDF</button></td>
+  </tr>
+</table>
+   <script>
+      var button = document.getElementById("pdfButton");
+      button.addEventListener("click", function () {
+         var doc = new jsPDF("p", "mm", [300, 300]);
+         var makePDF = document.querySelector("#generatePdf");
+         // fromHTML Method
+         doc.fromHTML(makePDF);
+         doc.save("java.pdf");
+      });
+   </script>
+</body>
+</html>
